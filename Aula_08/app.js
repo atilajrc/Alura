@@ -31,7 +31,7 @@ var cartaGui = {
 var cartaMaquina
 var cartaJogador
 var cartas = [cartaPaulo, cartaRafa, cartaGui]
-// 0          1           2
+              // 0          1           2
 
 function sortearCarta() {
   var numeroCartaMaquina = parseInt(Math.random() * 3)
