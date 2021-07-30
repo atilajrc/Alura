@@ -1,0 +1,19 @@
+Vagrant.configure("2") do |config|
+   config.vm.provider :libvirt do |v,override|
+     override.vm.box = "generic/ubuntu1804"
+   end
+
+  config.vm.define "wordpress" do |m|
+    m.vm.network "private_network", ip: "192.168.122.50"
+  end
+
+  config.vm.define "mysql" do |m|
+   m.vm.network "private_network", ip: "192.168.122.60"
+  end
+
+  config.vm.provider :libvirt do |lv|
+    lv.memory = 1024
+    lv.cpus = 2
+  end
+
+  end
